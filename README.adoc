@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/my-custom v1.0.0
-:revdate: 2020-05-25T09:25:37+0900
-:revremark: First Edition
+:revnumber: Branch feat/my-custom v1.1.0
+:revdate: 2020-05-25T09:28:14+0900
+:revremark: Update heading options
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -51,8 +51,6 @@ A single-page theme to introduce yourself.
 
 link:https://www.getzola.org[Zola^] port of {hallo-hugo-link}.
 ____
-
-image::screenshot.png[Screenshot]
 
 == Original
 
@@ -107,15 +105,12 @@ Default image^] is link:https://creativecommons.org/publicdomain/zero/1.0/[
 CC0 1.0^].
 
 == Options
-:default-greeting:     Hello!
-:default-iam:          I am
 :default-author-name:  Hallo
-:set-greeting-code:    greeting = "{default-greeting}"
-:set-iam-code:         iam = "{default-iam}"
 :set-author-name-code: name = "{default-author}"
 :set-background-code:  background = "#6FCDBD"
 :set-foreground-code:  foreground = "#FFF"
 :set-hook-code:        hover = "#333"
+:set-title_font_size-code: title_font_size = "5em"
 
 [%collapsible]
 ====
@@ -133,10 +128,6 @@ highlight_code = false
 build_search_index = false
 
 [extra]
-{set-greeting-code}
-
-{set-iam-code}
-
 links = [
     { title = "E-Mail", url = "mailto:mail@example.org", iconset = "fas", icon = "envelope" },
     { title = "GitHub", url = "https://github.com", icon = "github" },
@@ -150,32 +141,9 @@ links = [
 {set-background-code}
 {set-foreground-code}
 {set-hook-code}
+{set-title_font_size-code}
 ----
 ====
-
-=== Greeting
-
-The string will be used as a greeting.
-
-Default: `{default-greeting}`
-
-[source, toml, subs=attributes]
-----
-[extra]
-{set-greeting-code}
-----
-
-=== `iam`
-
-This variable defines the `I am` text, which you may want to swap out for another language.
-
-Default: `{default-iam}`
-
-[source, toml, subs=attributes]
-----
-[extra]
-{set-iam-code}
-----
 
 === Links
 
@@ -194,7 +162,7 @@ links = [
 
 === Author
 
-The given name will be used for the 'I am ...' text.
+The given name will be used for title.
 
 Default: `{default-author-name}`
 
@@ -214,6 +182,7 @@ Change the colors used.
 {set-background-code}
 {set-foreground-code}
 {set-hook-code}
+{set-title_font_size-code}
 ----
 
 == Copyright

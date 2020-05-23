@@ -30,6 +30,10 @@
                     border: 10px solid {{ config.extra.theme.foreground }} !important;
                 }
 
+                h1 {
+                  font-size: {{ config.extra.theme.title_font_size }} !important
+                }
+
                 footer {
                     display: block;
                     margin-top: 0.5rem;
@@ -45,8 +49,7 @@
                 <img src="{{ get_url(path='images/portrait.jpg') }}" class="portrait" alt="Portrait" />
             </div>
             <div class="column right">
-                <h1>{{ config.extra.greeting | default(value="Hello") }}</h1>
-                <h2>{{ config.extra.iam | default(value="I am") }} {{ config.extra.author.name | default(value="Hallo") }}.</h2>
+                <h1>{{ config.extra.author.name | default(value="Hello") }}</h1>
                 <p>{{ section.content | safe }}</p>
 
                 {% if config.extra.links %}
