@@ -29,6 +29,13 @@
                 img.portrait {
                     border: 10px solid {{ config.extra.theme.foreground }} !important;
                 }
+
+                footer {
+                    display: block;
+                    margin-top: 0.5rem;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
             </style>
         {% endif %}
     </head>
@@ -57,5 +64,8 @@
                 {% endif %}
             </div>
         </main>
+        <footer>
+          Powered by <a rel="external" href="https://www.getzola.org" title="zola">Zola</a> and <a rel="external" href="https://github.com/hituzi-no-sippo/zola-hallo" title="zola-hallo">hallo</a>
+        </footer>
     </body>
 </html>
