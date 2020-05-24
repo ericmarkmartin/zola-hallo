@@ -45,7 +45,37 @@ Hallo is a single-page theme to introduce yourself. Add a portrait, an introduct
 
 ## Options
 
-See [`config.toml`][config] for an example configuration.
+Example `config.toml`
+
+```toml
+base_url = "https://zola-hallo.janbaudisch.dev"
+title = "Hallo"
+
+compile_sass = true
+
+highlight_code = false
+
+build_search_index = false
+
+[extra]
+greeting = "Hello!"
+
+iam = "I am"
+
+links = [
+    { title = "E-Mail", url = "mailto:mail@example.org", iconset = "fas", icon = "envelope" },
+    { title = "GitHub", url = "https://github.com", icon = "github" },
+    { title = "Twitter", url = "https://twitter.com", icon = "twitter" }
+]
+
+[extra.author]
+name = "Hallo"
+
+[extra.theme]
+background = "#6FCDBD"
+foreground = "#FFF"
+hover = "#333"
+```
 
 ### Author
 
@@ -113,4 +143,3 @@ hover = "#333" # link hover
 [fontawesome]: https://fontawesome.com
 [fontawesome-brands]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
 [upstream-license]: https://github.com/janbaudisch/zola-hallo/blob/master/upstream/LICENSE
-[config]: https://github.com/janbaudisch/zola-hallo/blob/master/config.toml
