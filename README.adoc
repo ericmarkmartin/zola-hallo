@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/my-custom v1.1.0
-:revdate: 2020-05-25T09:28:14+0900
-:revremark: Update heading options
+:revnumber: Branch feat/my-custom v1.2.0
+:revdate: 2020-05-25T09:29:41+0900
+:revremark: Change default colors
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -107,9 +107,9 @@ CC0 1.0^].
 == Options
 :default-author-name:  Hallo
 :set-author-name-code: name = "{default-author}"
-:set-background-code:  background = "#6FCDBD"
-:set-foreground-code:  foreground = "#FFF"
-:set-hook-code:        hover = "#333"
+:set-background-code:  background = "#282c35"
+:set-foreground-code:  foreground = "hsla(0,0%, 100%, 0.88)"
+:set-hook-code:        hover = "#007acc"
 :set-title_font_size-code: title_font_size = "5em"
 
 [%collapsible]
