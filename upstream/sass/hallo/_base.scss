@@ -16,7 +16,7 @@ body {
 }
 
 a {
-    @include transition(color .2s ease-out);    
+    @include transition(color .2s ease-out);
     color: $color-foreground;
 
     &:hover {
