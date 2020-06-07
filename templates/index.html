@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Hatena::Bookmark" content="nocomment" />
 
         <title>{{ config.title }}</title>
 
@@ -29,6 +30,17 @@
                 img.portrait {
                     border: 10px solid {{ config.extra.theme.foreground }} !important;
                 }
+
+                h1 {
+                  font-size: {{ config.extra.theme.title_font_size }} !important
+                }
+
+                footer {
+                    display: block;
+                    margin-top: 0.5rem;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
             </style>
         {% endif %}
     </head>
@@ -38,14 +50,13 @@
                 <img src="{{ get_url(path='images/portrait.jpg') }}" class="portrait" alt="Portrait" />
             </div>
             <div class="column right">
-                <h1>{{ config.extra.greeting | default(value="Hello") }}</h1>
-                <h2>{{ config.extra.iam | default(value="I am") }} {{ config.extra.author.name | default(value="Hallo") }}.</h2>
+                <h1>{{ config.extra.author.name | default(value="Hello") }}</h1>
                 <p>{{ section.content | safe }}</p>
 
                 {% if config.extra.links %}
                     <div class="links">
                         {% for link in config.extra.links %}
-                            <a rel="me" href="{{ link.url }}" title="{{ link.title }}">
+                            <a rel="author" href="{{ link.url }}" title="{{ link.title }}">
                                 {% if link.iconset %}
                                     <span class="{{ link.iconset }} {{ 'fa-' ~ link.icon }}"></span>
                                 {% else %}
@@ -57,5 +68,8 @@
                 {% endif %}
             </div>
         </main>
+        <footer>
+          Powered by <a rel="external" href="https://www.getzola.org" title="zola">Zola</a> and <a rel="external" href="https://github.com/hituzi-no-sippo/zola-hallo" title="zola-hallo">hallo</a>
+        </footer>
     </body>
 </html>

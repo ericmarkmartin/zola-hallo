@@ -1,0 +1,201 @@
+= Zola-Hallo
+:author-name: hitsuji no shippo
+:!author-email:
+:author: {author-name}
+:!email: {author-email}
+:revnumber: v1.0.0
+:revdate: 2020-06-01T18:08:30+0900
+:revremark: First Edition
+:doctype: article
+:description: {doctitle} README
+:title:
+:experimental:
+:title-separtor: :
+:showtitle:
+:!sectnums:
+:sectids:
+:toc: preamble
+:toclevels: 2
+:sectlinks:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:xrefstyle: full
+:!example-caption:
+:!figure-caption:
+:!table-caption:
+:!listing-caption:
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[:icons: font]
+// Copyright
+:copyright-template: Copyright (c) 2020
+:copyright: {copyright-template} {author-name}
+// Page Attributes
+:page-creation-date: 2020-05-25T09:25:37+0900
+// Variables
+:github-url: https://github.com
+:github-profile-url: {github-url}/hitsuji-no-shippo
+:repository-url: {github-profile-url}/zola-hallo
+:repository-LT: link:{repository-url}
+:hallo-hugo-link: link:https://github.com/EmielH/hallo-hugo[hallo-hugo^]
+
+[quote]
+____
+A single-page theme to introduce yourself.
+
+link:https://www.getzola.org[Zola^] port of {hallo-hugo-link}.
+____
+
+== Original
+
+This is a port of the original {hallo-hugo-link} theme for Hugo
+(link:{repository-url}/blob/master/upstream/LICENSE[LICENSE^]).
+
+== Installation
+
+The easiest way to install this theme is to either clone it ...
+
+[source, bash, subs="attributes"]
+----
+git clone {repository-url}.git themes/hallo
+----
+
+... or to use it as a submodule.
+
+[source, bash, subs="attributes"]
+----
+git submodule add {repository-url}.git themes/hallo
+----
+
+Either way, you will have to enable the theme in your `config.toml`.
+
+[source, toml]
+----
+theme = "hallo"
+----
+
+=== Introduction
+
+The introduction text is made in `content/_index.md`.
+
+[source, Markdown]
+----
++++
++++
+Hallo is a single-page theme to introduce yourself. Add a portrait,
+an introduction, several links, and you're set. Create a partial called
+introduction.html on your own site to replace this standard introduction.
+Create a file called portrait.jpg in static/images to replace the standard
+portrait.
+----
+
+== Change portrait
+
+The image used for the portrait will be placed on the
+`static/images/portrait.jpg`.
+
+link:https://visualhunt.com/photo3/170504/[
+Default image^] is link:https://creativecommons.org/publicdomain/zero/1.0/[
+CC0 1.0^].
+
+== Options
+:default-author-name:  Hallo
+:set-author-name-code: name = "{default-author}"
+:set-background-code:  background = "#282c35"
+:set-foreground-code:  foreground = "hsla(0,0%, 100%, 0.88)"
+:set-hook-code:        hover = "#007acc"
+:set-title_font_size-code: title_font_size = "5em"
+
+[%collapsible]
+====
+
+.Example `config.toml`
+[source, toml, subs=attributes]
+----
+base_url = "https://www.hitsuji-no-shippo.me"
+title = "Hallo"
+
+compile_sass = true
+
+highlight_code = false
+
+build_search_index = false
+
+[extra]
+links = [
+    { title = "E-Mail", url = "mailto:mail@example.org", iconset = "fas", icon = "envelope" },
+    { title = "GitHub", url = "https://github.com", icon = "github" },
+    { title = "Twitter", url = "https://twitter.com", icon = "twitter" }
+]
+
+[extra.author]
+{set-author-name-code}
+
+[extra.theme]
+{set-background-code}
+{set-foreground-code}
+{set-hook-code}
+{set-title_font_size-code}
+----
+====
+
+=== Links
+
+Links show up below the introduction. They are styled with link:https://fontawesome.com[
+Font Awesome^], you may optionally choose the iconset (default is link:https://fontawesome.com/icons?d=gallery&s=brands&m=free[
+brands^]).
+
+[source, toml]
+----
+links = [
+    { title = "E-Mail", url = "mailto:mail@example.org", iconset = "fas", icon = "envelope" },
+    { title = "GitHub", url = "https://github.com", icon = "github" },
+    { title = "Twitter", url = "https://twitter.com", icon = "twitter" }
+]
+----
+
+=== Author
+
+The given name will be used for title.
+
+Default: `{default-author-name}`
+
+[source, toml, subs=attributes]
+----
+[extra.author]
+{set-author-name-code}
+----
+
+=== Theme
+
+Change the colors used.
+
+[source, toml, subs=attributes]
+----
+[extra.theme]
+{set-background-code}
+{set-foreground-code}
+{set-hook-code}
+{set-title_font_size-code}
+----
+
+== Copyright
+
+=== LICENSE
+
+.Project
+This project is licensed under MIT.
+
+{copyright-template} link:https://blog.hitsuji-no-shippo.me[{author-name}^]
+////
+Asciidoc Copyright
+This asciidoc code is licensed under
+CC0 1.0.
+https://creativecommons.org/publicdomain/zero/1.0/
+////
