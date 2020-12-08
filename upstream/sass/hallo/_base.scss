@@ -24,6 +24,10 @@ a {
     }
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Varela Round';
+}
+
 h1 {
     font-size: 9rem;
 }
@@ -32,6 +36,11 @@ h2 {
     font-size: 3rem;
     font-weight: normal;
 }
+
+p {
+    color: $color-header
+}
+
 @media screen and (max-width: $break-large) {
     h1 {
         font-size: 15vw;

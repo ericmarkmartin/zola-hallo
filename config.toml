@@ -24,4 +24,5 @@ name = "Hallo"
 [extra.theme]
 background = "#6FCDBD"
 foreground = "#FFF"
+header = "#FFF"
 hover = "#333"
